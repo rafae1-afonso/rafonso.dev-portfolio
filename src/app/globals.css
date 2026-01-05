@@ -46,7 +46,7 @@
 }
 
 *::selection {
-  background-color: #9389b6;
+  background-color: #3f2f6b;
 }
 
 @theme inline {
@@ -96,6 +96,20 @@
   --radius-2xl: calc(var(--radius) + 8px);
   --radius-3xl: calc(var(--radius) + 12px);
   --radius-4xl: calc(var(--radius) + 16px);
+}
+
+@keyframes backgroundTransition {
+  0% {
+    background-position: 0 82%;
+  }
+
+  50% {
+    background-position: 100% 19%;
+  }
+
+  100% {
+    background-position: 0 82%;
+  }
 }
 
 @keyframes flicker {
@@ -172,12 +186,25 @@ body {
   overflow: hidden;
 }
 
-.custom-scrollbar::-webkit-scrollbar {
+.color-animated-text {
+  transition: 1s;
+  color: transparent;
+  background: linear-gradient(90deg,rgba(250, 241, 75, 1) 0%, rgba(255, 48, 48, 1) 30%, rgba(100, 255, 77, 1) 71%, rgba(38, 208, 255, 1) 100%);
+  background-size: 1800% 1800%;
+  animation: backgroundTransition 12s ease infinite;
+  background-clip: text;
+}
+
+.invisible-scrollbar {
+  background-color: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar, .invisible-scrollbar::-webkit-scrollbar {
   height: 10px;
   width: 10px;
 }
 
-.custom-scrollbar::-webkit-scrollbar-track {
+.custom-scrollbar::-webkit-scrollbar-track, .invisible-scrollbar::-webkit-scrollbar-track {
   border-radius: 0px;
   background-color: transparent;
 }
@@ -204,8 +231,11 @@ body {
 .site-content {
   display: flex;
   flex-direction: column;
+  align-items: center;
   text-align: center;
   width: 100%;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
 }
 
 .tv-tube-shape::before {
@@ -294,6 +324,7 @@ body {
     @apply border-border outline-ring/50;
 
   }
+
   body {
     @apply bg-background text-foreground;
 
