@@ -83,7 +83,7 @@ const TechnologyCard = ({ technology }: { technology: Technologies }) => {
 
     return <div className={`
         flex items-center gap-2 ${styles[technology].bgColor} rounded-sm py-2 px-6 border border-white border-r-3 border-b-3
-        text-shadow-white hover:text-shadow-[0_0_10px_current] duration-200 text-sm
+        text-shadow-white hover:text-shadow-[0_0_10px_current] duration-200 text-sm font-2p
     `}>
         {styles[technology].content}
     </div>

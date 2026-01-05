@@ -4,7 +4,7 @@ import TextType from '../TextType'
 import { TbFileCv } from 'react-icons/tb'
 
 const Start = () => {
-    return <section className="group duration-1000 flex flex-col items-center gap-10 my-[38vh] cursor-default px-20">
+    return <section className="group duration-1000 font-2p flex flex-col items-center gap-10 my-[38vh] cursor-default px-20">
         <TextType
             className='text-sm color-animated-text'
             text="Web Developer"
@@ -14,7 +14,7 @@ const Start = () => {
         />
         <div className="duration-1000 text-5xl flex justify-center items-center gap-5 group-hover:text-shadow-[0_0_10px_white]">
             <span>&lt;</span>
-            <h1>RAFAEL <br /> <span className="ml-30">AF0NSO</span></h1>
+            <h1>RAFAEL <br /> <span className="ml-30 ">AF0NSO</span></h1>
             <span className="flex items-center"><span className="text-6xl ml-10">/</span>&gt;</span>
         </div>
         <div className="flex gap-10">

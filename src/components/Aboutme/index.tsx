@@ -16,10 +16,10 @@ const Aboutme = () => {
                     width={250} height={0}
                     className="rounded border-2 border-chrome-gray"
                 />
-                <div className="flex flex-col items-start text-sm py-2 gap-2">
-                    <p><span className="text-chrome-light-gray font-bold">NAME:</span> RAFAEL AFONSO FERREIRA DE LIMA</p>
-                    <p><span className="text-chrome-light-gray font-bold">ROLE:</span> FRONT-END | BACK-END DEVELOPER</p>
-                    <p className="text-start"><span className="text-chrome-light-gray font-bold">RESUME:</span> {database.aboutme.aboutmeText.english}</p>
+                <div className="flex flex-col items-start text-lg py-2 gap-2">
+                    <p className="flex items-center"><span className="text-sm text-chrome-light-gray font-bold font-2p">NAME:</span> RAFAEL AFONSO FERREIRA DE LIMA</p>
+                    <p className="flex items-center"><span className="text-sm text-chrome-light-gray font-bold font-2p">ROLE:</span> FRONT-END | BACK-END DEVELOPER</p>
+                    <p className="text-start"><span className="text-sm text-chrome-light-gray font-bold font-2p">RESUME:</span> {database.aboutme.aboutmeText.english}</p>
                 </div>
             </div>
             <div className='border-b-2'></div>
