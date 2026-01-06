@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { FaGithub, FaLinkedinIn } from 'react-icons/fa'
+import { FaLinkedinIn, FaGithub } from 'react-icons/fa'
 import TextType from '../TextType'
 import { TbFileCv } from 'react-icons/tb'
 

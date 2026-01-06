@@ -1,31 +1,7 @@
 {
-    "aboutme": {
-        "aboutmeText": {
-            "english": "Web Developer focused in create really cools web applications with style using technologies like reactJS, nextJS, nodeJS, tailwindCSS and others.",
-            "portuguese": "Desenvolvedor Web focado em criar aplicações web bem legais e com estilo, usando tecnologias como reactJS, nextJS, nodeJS, tailwindCSS e outras."
-        }
-    },
     "projects": [
         {
             "id": 1,
-            "routeName": "portfolio-exe",
-            "title": "portFolio.exe",
-            "thumbnail": "/logo.png",
-            "repositoryUrl": "https://github.com/rafae1-afonso/portfolio.exe",
-            "description": {
-                "english": "I had the idea to create a portfolio with a different aesthetic, so I took inspiration from A$AP Rocky's AWGE website and created this project.",
-                "portuguese": "Tive a ideia de fazer um portfólio com uma estética diferente, então peguei como inspiração o site da AWGE do A$ap Rocky e criei este projeto."
-            },
-            "technologies": [
-                "HTML",
-                "CSS",
-                "TypeScript",
-                "NextJS",
-                "TailwindCSS"
-            ]
-        },
-        {
-            "id": 2,
             "routeName": "narcissist-supply",
             "title": "Narcissist Supply",
             "thumbnail": "/projects/narcissist-supply/thumbnail.png",
