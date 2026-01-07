@@ -2,7 +2,7 @@ import React from 'react'
 
 const TVComponent = ({ children }: { children: React.ReactNode }) => {
     return <>
-        <div className={`tv-tube-border bg-[url(/tv-border.png)] w-full h-full absolute pointer-events-none scale-110`}></div>
+        <div className={`tv-tube-border hidden lg:block bg-[url(/tv-border.png)] w-full h-full absolute pointer-events-none scale-110`}></div>
         <div className="tv-tube-shape animate-[tv-animation_.5s]">
             <div className="site-content animate-[opacity-anim_1s]">
                 <main className='overflow-y-scroll overflow-x-clip scroll-smooth ml-6 mb-20 invisible-scrollbar w-full h-screen'>

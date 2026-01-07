@@ -8,7 +8,7 @@ const Navbutton = ({ href, children }: { href: string, children: React.ReactNode
 }
 
 const Navbar = ({ homeOnly = false }: { homeOnly?: boolean }) => {
-    return <nav className='duration-1000 absolute flex gap-5 text-xs top-[10%] left-[6%] rounded backdrop-blur-sm px-1 py-2 z-10 font-2p'>
+    return <nav className='duration-1000 absolute flex gap-5 text-xs left-[50%] translate-x-[-50%] top-[10%] lg:left-[6%] lg:translate-x-0 rounded backdrop-blur-sm px-1 py-2 z-10 font-2p'>
         {
             !homeOnly ?
                 <Navbutton href={'/#start'}>

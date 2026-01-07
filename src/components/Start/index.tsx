@@ -12,14 +12,14 @@ const Start = () => {
             cursorCharacter="_"
             loop={false}
         />
-        <div className="duration-1000 text-5xl flex justify-center items-center gap-5 group-hover:text-shadow-[0_0_10px_white]">
-            <span>&lt;</span>
-            <h1>RAFAEL <br /> <span className="ml-30 ">AF0NSO</span></h1>
-            <span className="flex items-center"><span className="text-6xl ml-10">/</span>&gt;</span>
+        <div className="duration-1000 text-4xl lg:text-5xl flex justify-center items-center gap-5 group-hover:text-shadow-[0_0_10px_white]">
+            <span className='hidden lg:block'>&lt;</span>
+            <h1 className='mr-15'>RAFAEL <br /> <span className="ml-30">AF0NSO</span></h1>
+            <span className="hidden lg:flex items-center "><span className="text-6xl ml-10">/</span>&gt;</span>
         </div>
         <div className="flex gap-10">
             <Link
-                href='https://www.linkedin.com/in/rafaelafonsofl/'
+                href='https://www.linkedin.com/in/rafaelafonsofl'
                 target="_blank"
                 className="duration-200 text-blue-400 hover:opacity-50 animate-[levitation_1s_infinite]"
             >

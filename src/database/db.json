@@ -27,6 +27,31 @@
                 "NodeJS",
                 "TailwindCSS"
             ]
+        },
+        {
+            "id": 2,
+            "routeName": "cryptovault",
+            "title": "CryptoVault",
+            "thumbnail": "/projects/cryptovault/screenshot1.png",
+            "cardBorderStyle": "border-yellow-400/50 hover:shadow-[0_0_20px_yellow] hover:border-amber-400",
+            "complexity": 1,
+            "description": {
+                "english": "This project was created as a study on requests to third-party APIs. The project uses the CoinStats open API to get the cryptocurrencies informations."
+            },
+            "repositoryUrl": "https://github.com/rafae1-afonso/cryptovault-app",
+            "deployUrl": "https://cryptovault-app.vercel.app",
+            "screenshots": [
+                "/projects/cryptovault/screenshot1.png",
+                "/projects/cryptovault/screenshot2.png",
+                "/projects/cryptovault/screenshot3.png",
+                "/projects/cryptovault/screenshot4.png"
+            ],
+            "technologies": [
+                "HTML",
+                "CSS",
+                "TypeScript",
+                "ReactJS"
+            ]
         }
     ]
 }

@@ -14,10 +14,10 @@ const Paragraph = ({ children, title }: { children: React.ReactNode, title: stri
 }
 
 const Aboutme = () => {
-    return <section id="aboutme" className="group flex flex-col items-center gap-10 px-20 mb-32">
+    return <section id="aboutme" className="group flex flex-col items-center gap-10 lg:px-20 mb-32">
         <SectionHeader imgSrc="/aboutme.gif" title="ABOUT ME" />
         <div className="flex flex-col gap-10 w-full p-5 backdrop-blur-md rounded border border-chrome-gray">
-            <div className="flex gap-10">
+            <div className="flex flex-col items-center lg:flex-row gap-10">
                 <Image
                     src={'https://github.com/rafae1-afonso.png'}
                     alt="profile pic"

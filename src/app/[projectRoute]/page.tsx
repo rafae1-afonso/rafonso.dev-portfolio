@@ -44,7 +44,7 @@ const page = ({ params }: { params: Promise<{ projectRoute: string }> }) => {
         <SectionHeader title={project?.title} />
         {
             project ?
-                <div className='flex flex-col gap-16 mt-16 px-20'>
+                <div className='flex flex-col gap-16 mt-16 lg:px-20'>
                     <div className='w-full flex gap-10 justify-center'>
                         {
                             !project.screenshots
@@ -58,7 +58,7 @@ const page = ({ params }: { params: Promise<{ projectRoute: string }> }) => {
                     </div>
                     {
                         project.repositoryUrl &&
-                        <div className='flex justify-center gap-5 font-2p'>
+                        <div className='flex flex-col px-10 lg:p-0 lg:flex-row justify-center gap-5 font-2p'>
                             <Link href={project.repositoryUrl} target='_blank' className='flex items-center bg-chrome-gray rounded-sm py-2 px-6 border border-white border-r-3 border-b-3'>
                                 <NeonButton><p className='flex items-center gap-2'><TbBrandGithubFilled size={25} /> REPOSITORY</p></NeonButton>
                             </Link>

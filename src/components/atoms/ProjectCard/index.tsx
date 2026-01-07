@@ -73,7 +73,7 @@ const ProjectCard = ({ thumbnailSrc, title, borderStyling = 'hover:border-white 
         <motion.div
             className={`              
                 duration-200 cursor-pointer backdrop-blur-md font-2p
-                relative [transform-style:preserve-3d] flex flex-col pb-5 px-3 rounded border-2 border-b-10
+                relative [transform-style:preserve-3d] flex flex-col py-5 px-3 gap-2 rounded border-2 border-b-10
                 border-chrome-gray
                 ${borderStyling}
                 `
