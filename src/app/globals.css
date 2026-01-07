@@ -194,18 +194,18 @@ body {
 .scrollHidden {
     transition: 1s;
     opacity: 0;
-    transform: translateY(50px);
+    transform: translateX(-100px);
 }
 
 .scrollShow {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateX(0);
 }
 
 .color-animated-text, .link:hover {
   transition: 1s;
   color: transparent;
-  background: linear-gradient(90deg,rgba(250, 241, 75, 1) 0%, rgba(255, 48, 48, 1) 30%, rgba(100, 255, 77, 1) 71%, rgba(38, 208, 255, 1) 100%);
+  background: linear-gradient(90deg,#faf14b 0%, #ff3030 30%, #64ff4d 71%, #26d0ff 100%);
   background-size: 1800% 1800%;
   animation: backgroundTransition 12s ease infinite;
   background-clip: text;

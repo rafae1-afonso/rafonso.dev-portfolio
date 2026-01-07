@@ -2,6 +2,7 @@
 'use client'
 import NeonButton from '@/components/atoms/NeonButton';
 import PhotoCarousel from '@/components/atoms/PhotosCarousel';
+import StatsBar from '@/components/atoms/StatsBar';
 import TechnologyCard from '@/components/atoms/TechnologyCard';
 import Footer from '@/components/Footer';
 import ContentBoxComponent from '@/components/molecules/ContentBox';
@@ -38,7 +39,7 @@ const page = ({ params }: { params: Promise<{ projectRoute: string }> }) => {
     });
 
     return <TVComponent>
-        <Navbar homeOnly/>
+        <Navbar homeOnly />
         <div className='mt-32'></div>
         <SectionHeader title={project?.title} />
         {
@@ -76,13 +77,19 @@ const page = ({ params }: { params: Promise<{ projectRoute: string }> }) => {
                         </div>
                     }
                     <div className='flex flex-col gap-10 p-5 backdrop-blur-md rounded border border-chrome-gray'>
-                        <div className='border-b-2 opacity-10'></div>
+                        <div className="flex justify-center font-2p pt-10">
+                            <div className="flex gap-5 flex-col items-center px-12 py-6 bg-black/50 rounded">
+                                <h1 className="text-sm">COMPLEXITY</h1>
+                                <StatsBar level={project.complexity} complexityMeter />
+                            </div>
+                        </div>
+                        <div className='border-b-2'></div>
                         <ContentBoxComponent title='DESCRIPTION'>
-                            <p className='scrollHidden'>
+                            <p className='text-lg'>
                                 {project.description.english}
                             </p>
                         </ContentBoxComponent>
-                        <div className='border-b-2 opacity-10'></div>
+                        <div className='border-b-2'></div>
                         <ContentBoxComponent title='USED TECHNOLOGIES'>
                             <div className='flex flex-wrap gap-5 items-center justify-center'>
                                 {

@@ -62,7 +62,7 @@ function CarouselItem({ photo, index, itemWidth, trackItemOffset, x, transition 
 
 const PhotoCarousel = ({
     photos,
-    baseWidth = 800,
+    baseWidth = 1000,
     autoplay = true,
     autoplayDelay = 3000,
     pauseOnHover = true,

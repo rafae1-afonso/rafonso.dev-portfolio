@@ -6,6 +6,7 @@
             "title": "Narcissist Supply",
             "thumbnail": "/projects/narcissist-supply/thumbnail.png",
             "cardBorderStyle": "border-red-500/50 hover:shadow-[0_0_20px_red] hover:border-red-500",
+            "complexity": 2,
             "description": {
                 "english": "I created this project to practice Angular 21; it's an e-commerce site for a fictional punk-style clothing brand. Those in the know will recognize the inspiration for the logo. The backend was created using NodeJS with Express and Prisma ORM, with a local SQLite database.",
                 "portuguese": "Criei este projeto para práticar Angular na versão 21, ele é um ecommerce de uma marca fictícia de roupas com estilo punk, sabedores saberão a inspiração para a logomarca. O backend foi criado utilizando NodeJS com Express e Prisma ORM, com um banco de dados SQLite local."
