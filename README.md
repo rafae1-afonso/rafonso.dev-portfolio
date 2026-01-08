@@ -1,3 +1,3 @@
-work in progress
+yes
 
 Live: https://rafonso-dev-portfolio.vercel.app
