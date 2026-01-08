@@ -5,6 +5,7 @@ import { Technologies } from "@/enums"
 import TechnologyCard from "../atoms/TechnologyCard"
 import Link from "next/link"
 import StatsBar from "../atoms/StatsBar"
+import Experience from "../molecules/Experience"
 
 const Paragraph = ({ children, title }: { children: React.ReactNode, title: string }) => {
     return <p className="text-start scrollHidden text-lg">
@@ -35,8 +36,8 @@ const Aboutme = () => {
                         WEB DEVELOPER
                     </Paragraph>
                     <Paragraph title="ABOUT">
-                        I&apos;m a web developer focused on building clean, responsive user interfaces with <strong>React</strong>
-                        and <strong>Next.js</strong>,
+                        I&apos;m a web developer focused on building clean, responsive user interfaces with
+                        <strong> React</strong> and <strong>Next.js</strong>,
                         I also have experience with <strong>Node.js</strong> and <strong>Express</strong> on the back end.
                         Currently I&apos;m seeking opportunities for an internship/junior position or a freelance project.
                     </Paragraph>
@@ -46,7 +47,7 @@ const Aboutme = () => {
             <div className="flex justify-center font-2p">
                 <div className="flex gap-5 flex-col items-center px-12 py-6 bg-black/50 rounded">
                     <h1 className="text-sm">ENGLISH LEVEL</h1>
-                    <StatsBar level={3}/>
+                    <StatsBar level={3} />
                 </div>
             </div>
 
@@ -59,9 +60,9 @@ const Aboutme = () => {
                 </div>
             </ContentBoxComponent>
             <div className='border-b-2'></div>
-            <ContentBoxComponent title="SCHOOL">
+            <ContentBoxComponent title="EDUCATION">
                 <ul className="w-full px-5 gap-10 text-lg flex flex-col items-start list-disc">
-                    <li>Last high school year in progress ( scheduled end at the end of 2026 )</li>
+                    <li>Last high school year in progress (end estimated date: end of 2026)</li>
                     <li>
                         <strong>React.js | Next.js | Node.js | MySQL</strong> courses completed on the <Link className="link underline font-bold" target="_blank" href={'https://cursos.alura.com.br/user/rafae1-af0nso/fullCertificate/1593bc3353d0642010b187e92f90b8f3'}>Alura platform</Link>
                     </li>
@@ -69,9 +70,13 @@ const Aboutme = () => {
             </ContentBoxComponent>
             <div className='border-b-2'></div>
             <ContentBoxComponent title="EXPERIENCES">
-                <ul className="w-full px-5 gap-10 text-lg flex flex-col items-start list-disc">
-                    <li>Participation in open-source projects as Front-End</li>
-                </ul>
+                <Experience company="Dev Codes" date="JULY 2025 - OCTOBER 2025" role="Volunteer Front-End Developer">
+                    <li>Development of an online restaurant menu platform using Figma provided by the
+                        designer, utilizing <strong>React</strong> for better reuse of styled components with <strong>Styled
+                        Components</strong>.
+                    </li>
+                    <li>Frontend integration with the backend to obtain data from the <strong>REST API</strong>.</li>
+                </Experience>
             </ContentBoxComponent>
         </div>
     </section>

@@ -26,7 +26,8 @@ const Start = () => {
                 <FaLinkedinIn size={45} />
             </Link>
             <Link
-                href=''
+                href='/cv.pdf'
+                target='_blank'
                 className="duration-200 text-gray-400 hover:opacity-50 animate-[levitation_1s_infinite_reverse]"
             >
                 <TbFileCv size={45} />
