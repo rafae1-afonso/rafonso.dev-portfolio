@@ -7,7 +7,7 @@ const Start = () => {
     return <section className="group duration-1000 font-2p flex flex-col items-center gap-10 my-[38vh] cursor-default px-20">
         <TextType
             className='text-sm color-animated-text'
-            text="Web Developer"
+            text="Full-Stack Developer"
             as={'h2'}
             cursorCharacter="_"
             loop={false}
