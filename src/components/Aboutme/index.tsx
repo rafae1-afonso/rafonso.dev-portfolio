@@ -4,10 +4,12 @@ import ContentBoxComponent from "../molecules/ContentBox"
 import { Technologies } from "@/enums"
 import TechnologyCard from "../atoms/TechnologyCard"
 import Link from "next/link"
-import StatsBar from "../atoms/StatsBar"
 import Experience from "../molecules/Experience"
-import NeonButton from "../atoms/NeonButton"
 import { useState } from "react"
+import { useLanguage } from "@/lib/LanguageContext"
+import { htmlStringToReactNodes } from "@/lib/utils"
+import database from "@/database"
+import { IoMdDownload } from "react-icons/io"
 
 const Paragraph = ({ children, title }: { children: React.ReactNode, title: string }) => {
     return <p className="text-start scrollHidden text-lg">
@@ -16,17 +18,19 @@ const Paragraph = ({ children, title }: { children: React.ReactNode, title: stri
     </p>
 }
 
-const ShowButton = ({ onclick, children }: { onclick: () => void, children: React.ReactNode }) => {
-    return <button onClick={onclick} className='cursor-pointer duration-200 hover:text-shadow-[0_0_10px_white] active:brightness-50 font-2p bg-blue-300/10 py-1 w-80 rounded'>
+const DownloadResume = ({ children }: { children: React.ReactNode }) => {
+    return <Link download href="/Rafael_Afonso_CV.pdf" className='duration-200 flex items-center gap-3 font-2p text-sm lg:text-lg cursor-pointer hover:shadow-[0_0_10px_white] hover:bg-white hover:text-black'>
         {children}
-    </button>
+    </Link>
 }
+
 
 const Aboutme = () => {
     const [techIsVisible, setTechIsVisible] = useState(false)
+    const { language } = useLanguage()
 
     return <section id="aboutme" className="group flex flex-col items-center gap-10 lg:px-20 mb-32">
-        <SectionHeader imgSrc="/aboutme.gif" title="ABOUT ME" />
+        <SectionHeader imgSrc="/aboutme.gif" title={database.aboutme.header[language]} />
         <div className="flex flex-col gap-10 w-full p-5 backdrop-blur-md rounded border border-chrome-gray">
             <div className="flex flex-col items-center lg:flex-row gap-10">
                 <Image
@@ -36,65 +40,58 @@ const Aboutme = () => {
                     className="rounded border-2 border-chrome-gray"
                 />
                 <div className="flex flex-col items-start text-lg py-2 gap-2">
-                    <Paragraph title="NAME">
+                    <Paragraph title={database.aboutme.profile.nameLabel[language]}>
                         RAFAEL AFONSO FERREIRA DE LIMA
                     </Paragraph>
-                    <Paragraph title="NATIONALITY">
-                        BRAZILIAN
+                    <Paragraph title={database.aboutme.profile.nationalityLabel[language]}>
+                        {database.aboutme.profile.nationality[language]}
                     </Paragraph>
-                    <Paragraph title="ROLE">
-                        FULL-STACK DEVELOPER
+                    <Paragraph title={database.aboutme.profile.roleLabel[language]}>
+                        {database.aboutme.profile.role[language]}
                     </Paragraph>
-                    <Paragraph title="ABOUT">
-                        I&apos;m a young full-stack developer focused on building clean, responsive user interfaces with
-                        <strong> React</strong> and <strong>Next.js</strong>,
-                        I also have experience with <strong>Node.js</strong> and <strong>Express</strong> on the back end.
-                        Currently I&apos;m seeking opportunities for an internship/junior position or a freelance project.
+                    <Paragraph title={database.aboutme.profile.aboutLabel[language]}>
+                        {htmlStringToReactNodes(database.aboutme.profile.about[language])}
                     </Paragraph>
                 </div>
             </div>
 
-            {/* <div className="flex justify-center font-2p">
-                <div className="flex gap-5 flex-col items-center px-12 py-6 bg-black/50 rounded">
-                    <h1 className="text-sm">ENGLISH LEVEL</h1>
-                    <StatsBar level={3} />
-                </div>
-            </div> */}
-
             <div className='border-b-2'></div>
-            <ContentBoxComponent title="EDUCATION">
+            <ContentBoxComponent title={database.aboutme.education.header[language]}>
                 <ul className="w-full px-5 gap-10 text-lg flex flex-col items-start list-disc">
-                    <li>Last high school year in progress (end estimated date: end of 2026)</li>
-                    <li>
-                        <strong>React.js | Next.js | Node.js | MySQL</strong> courses completed on the <Link className="link underline font-bold" target="_blank" href={'https://cursos.alura.com.br/user/rafae1-af0nso/fullCertificate/1593bc3353d0642010b187e92f90b8f3'}>Alura platform</Link>
-                    </li>
+                    {
+                        database.aboutme.education.content.map((item, index) => <li key={index}>{htmlStringToReactNodes(item[language])}</li>)
+                    }
+                    <li><Link className="link underline font-bold" target="_blank" href={'https://cursos.alura.com.br/user/rafae1-af0nso/fullCertificate/1593bc3353d0642010b187e92f90b8f3'}>Alura</Link></li>
                 </ul>
             </ContentBoxComponent>
             <div className='border-b-2'></div>
-            <ContentBoxComponent title="EXPERIENCES">
-                <Experience company="Volunteer Project" date="JULY 2025 - OCTOBER 2025" role="Volunteer Front-End Developer">
-                    <li>Development of an online restaurant menu platform using Figma provided by the
-                        designer, utilizing <strong>React</strong> for better reuse of styled components with <strong>Styled
-                            Components</strong>.
-                    </li>
-                    <li>Frontend integration with the backend to obtain data from the <strong>REST API</strong>.</li>
-                </Experience>
+            <ContentBoxComponent title={database.aboutme.experiences.header[language]}>
+                {
+                    database.aboutme.experiences.items.map((item, index) => (
+                        <Experience key={index} company={item.company} date={item.period[language]} role={item.role[language]}>
+                            {
+                                item.content.map((contentItem, contentIndex) => <li key={contentIndex}>{htmlStringToReactNodes(contentItem[language])}</li>)
+                            }
+
+                            <li className="flex gap-2">
+                                {
+                                    item.links.map((link, linkIndex) => (
+                                        <Link key={linkIndex} className="link underline font-bold" target="_blank" href={link.href}>
+                                            {link.content}
+                                        </Link>
+                                    ))
+                                }
+                            </li>
+
+                        </Experience>
+                    ))
+                }
             </ContentBoxComponent>
             <div className='border-b-2'></div>
             <div className="flex flex-col items-center gap-5">
-                <ShowButton onclick={() => setTechIsVisible(!techIsVisible)}>
-                    {techIsVisible ? 'HIDE' : 'SHOW'} TECHNOLOGIES
-                </ShowButton>
-                {
-                    techIsVisible &&
-                    <ContentBoxComponent title="TECHNOLOGIES">
-                        <div className='flex flex-wrap gap-5 items-center justify-center'>
-                            {
-                                Object.values(Technologies).map(tech => <TechnologyCard key={tech} technology={tech} />)
-                            }
-                        </div>
-                    </ContentBoxComponent>
-                }
+                <DownloadResume>
+                    <IoMdDownload size={25} /> {database.aboutme.resume[language]}
+                </DownloadResume>
             </div>
         </div>
     </section>

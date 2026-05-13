@@ -5,7 +5,7 @@ const TVComponent = ({ children }: { children: React.ReactNode }) => {
         <div className={`tv-tube-border hidden lg:block bg-[url(/tv-border.png)] w-full h-full absolute pointer-events-none scale-110`}></div>
         <div className="tv-tube-shape animate-[tv-animation_.5s]">
             <div className="site-content animate-[opacity-anim_1s]">
-                <main className='overflow-y-scroll overflow-x-clip scroll-smooth ml-6 mb-20 invisible-scrollbar w-full h-screen'>
+                <main className='overflow-y-scroll overflow-x-clip scroll-smooth mr-6 ml-6 lg:mr-0 lg:ml-8 mb-20 invisible-scrollbar w-full h-screen'>
                     {children}
                 </main>
             </div>

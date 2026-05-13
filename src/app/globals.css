@@ -140,11 +140,11 @@
 
 @keyframes opacity-anim {
   0% {
-    opacity: 0%;
+    opacity: 10%;
   }
 
   100% {
-    opacity: 100%;
+    opacity: 70%;
   }
 }
 

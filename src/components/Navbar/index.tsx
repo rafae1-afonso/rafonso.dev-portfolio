@@ -1,35 +1,39 @@
 import Link from 'next/link'
 import React from 'react'
+import { IoMdDownload } from 'react-icons/io'
+import { useLanguage } from '@/lib/LanguageContext'
+import database from '@/database'
 
-const Navbutton = ({ href, children }: { href: string, children: React.ReactNode }) => {
-    return <a href={href} className='duration-200 hover:text-shadow-[0_0_10px_white] active:brightness-50'>
+const Navbutton = ({ href, download, children }: { href: string, download?: boolean, children: React.ReactNode }) => {
+    return <a href={href} download={download} className='duration-200 hover:text-shadow-[0_0_10px_white] active:brightness-50'>
         {children}
     </a>
 }
 
-const Navbar = ({ homeOnly = false }: { homeOnly?: boolean }) => {
+const Navbar = () => {
+    const { language, setLanguage } = useLanguage()
+
     return <nav className='duration-1000 absolute flex gap-5 text-xs left-[50%] translate-x-[-50%] top-[10%] lg:left-[6%] lg:translate-x-0 rounded backdrop-blur-sm px-1 py-2 z-10 font-2p'>
-        {
-            !homeOnly ?
+        
+            
                 <Navbutton href={'/#start'}>
-                    HOME
+                    {database.navbar.home[language]}
                 </Navbutton>
-                :
-                <Link href={'/'} className='duration-200 hover:text-shadow-[0_0_10px_white] active:brightness-50'>
-                    HOME
-                </Link>
-        }
-        {
-            !homeOnly &&
-            <>
+
                 <Navbutton href={'/#aboutme'}>
-                    ABOUT
+                    {database.navbar.about[language]}
                 </Navbutton>
                 <Navbutton href={'/#projects'}>
-                    PROJECTS
+                    {database.navbar.projects[language]}
                 </Navbutton>
-            </>
-        }
+                <select
+                    value={language}
+                    onChange={(e) => setLanguage(e.target.value as 'en' | 'pt')}
+                    className='bg-transparent text-white border-none outline-none cursor-pointer'
+                >
+                    <option value="en" className='bg-black'>EN</option>
+                    <option value="pt" className='bg-black'>PT</option>
+                </select>
     </nav>
 }
 

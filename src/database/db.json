@@ -1,57 +1,151 @@
 {
-    "projects": [
-        {
-            "id": 1,
-            "routeName": "narcissist-supply",
-            "title": "Narcissist Supply",
-            "thumbnail": "/projects/narcissist-supply/thumbnail.png",
-            "cardBorderStyle": "border-red-500/50 hover:shadow-[0_0_20px_red] hover:border-red-500",
-            "complexity": 2,
-            "description": {
-                "english": "I created this project to practice Angular 21; it's an e-commerce site for a fictional punk-style clothing brand. Those in the know will recognize the inspiration for the logo. The backend was created using NodeJS with Express and Prisma ORM, with a local SQLite database.",
-                "portuguese": "Criei este projeto para práticar Angular na versão 21, ele é um ecommerce de uma marca fictícia de roupas com estilo punk, sabedores saberão a inspiração para a logomarca. O backend foi criado utilizando NodeJS com Express e Prisma ORM, com um banco de dados SQLite local."
+    "navbar": {
+        "home": {
+            "en": "HOME",
+            "pt": "INICIO"
+        },
+        "about": {
+            "en": "ABOUT",
+            "pt": "SOBRE"
+        },
+        "projects": {
+            "en": "PROJECTS",
+            "pt": "PROJETOS"
+        }
+    },
+    "start": {
+        "role": "Full-Stack Developer"
+    },
+    "aboutme": {
+        "header": {
+            "en": "ABOUT ME",
+            "pt": "SOBRE MIM"
+        },
+        "profile": {
+            "nameLabel": {
+                "en": "NAME",
+                "pt": "NOME"
             },
-            "repositoryUrl": "https://github.com/rafae1-afonso/narcissist-frontend",
-            "backendRepositoryUrl": "https://github.com/rafae1-afonso/narcissist-backend",
-            "deployUrl": "https://narcissist-frontend.onrender.com",
-            "screenshots": [
-                "/projects/narcissist-supply/screenshot1.png",
-                "/projects/narcissist-supply/screenshot2.png",
-                "/projects/narcissist-supply/screenshot3.png"
-            ],
-            "technologies": [
-                "HTML",
-                "CSS",
-                "TypeScript",
-                "Angular",
-                "NodeJS",
-                "TailwindCSS"
+            "name": "RAFAEL AFONSO FERREIRA DE LIMA",
+            "nationalityLabel": {
+                "en": "NATIONALITY",
+                "pt": "NACIONALIDADE"
+            },
+            "nationality": {
+                "en": "BRAZILIAN",
+                "pt": "BRASILEIRO"
+            },
+            "roleLabel": {
+                "en": "ROLE",
+                "pt": "CARGO"
+            },
+            "role": {
+                "en": "FULL-STACK DEVELOPER",
+                "pt": "DESENVOLVEDOR FULL-STACK"
+            },
+            "aboutLabel": {
+                "en": "ABOUT",
+                "pt": "SOBRE"
+            },
+            "about": {
+                "en": "I'm a young full-stack developer focused on building clean, responsive user interfaces with <strong>React</strong> and <strong>Next.js</strong>, I also have experience with <strong>Node.js</strong> and <strong>Express</strong> on the back end. Currently I'm seeking opportunities for an internship/junior position or a freelance project.",
+                "pt": "Sou um jovem desenvolvedor full-stack focado em construir interfaces de usuário limpas e responsivas com <strong>React</strong> e <strong>Next.js</strong>, também tenho experiência com <strong>Node.js</strong> e <strong>Express</strong> no backend. Atualmente estou buscando oportunidades para um estágio/posição júnior ou um projeto freelance."
+            }
+        },
+        "education": {
+            "header": {
+                "en": "EDUCATION",
+                "pt": "EDUCAÇAO"
+            },
+            "content": [
+                {
+                    "en": "Last high school year in progress (end estimated date: end of 2026)",
+                    "pt": "Último ano do ensino médio em andamento (data estimada de conclusão: final de 2026)"
+                },
+                {
+                    "en": "<strong>React.js</strong> | <strong>Next.js</strong> | <strong>Node.js</strong> | <strong>MySQL</strong> courses certificates",
+                    "pt": "Cursos de <strong>React.js</strong> | <strong>Next.js</strong> | <strong>Node.js</strong> | <strong>MySQL</strong>"
+                }
             ]
         },
-        {
-            "id": 2,
-            "routeName": "cryptovault",
-            "title": "CryptoVault",
-            "thumbnail": "/projects/cryptovault/screenshot1.png",
-            "cardBorderStyle": "border-yellow-400/50 hover:shadow-[0_0_20px_yellow] hover:border-amber-400",
-            "complexity": 1,
-            "description": {
-                "english": "This project was created as a study on requests to third-party APIs. The project uses the CoinStats open API to get the cryptocurrencies informations."
+        "experiences": {
+            "header": {
+                "en": "EXPERIENCES",
+                "pt": "EXPERIENCIA"
             },
-            "repositoryUrl": "https://github.com/rafae1-afonso/cryptovault-app",
-            "deployUrl": "https://cryptovault-app.vercel.app",
-            "screenshots": [
-                "/projects/cryptovault/screenshot1.png",
-                "/projects/cryptovault/screenshot2.png",
-                "/projects/cryptovault/screenshot3.png",
-                "/projects/cryptovault/screenshot4.png"
-            ],
-            "technologies": [
-                "HTML",
-                "CSS",
-                "TypeScript",
-                "ReactJS"
+            "items": [
+                {
+                    "company": "Dev Codes Volunteer Project",
+                    "period": {
+                        "en": "JULY 2025 - OCTOBER 2025",
+                        "pt": "JULHO 2025 - OUTUBRO 2025"
+                    },
+                    "role": {
+                        "en": "Volunteer Front-End Developer",
+                        "pt": "Desenvolvedor Front-End Voluntário"
+                    },
+                    "content": [
+                        {
+                            "en": "Development of an restaurant menu website, with a responsive design for desktop and mobile devices, implemented using <strong>React.js</strong> and <strong>JavaScript</strong>.",
+                            "pt": "Desenvolvimento de um site de cardápio de restaurante, com design responsivo para desktop e mobile, implementado usando <strong>React.js</strong> e <strong>JavaScript</strong>."
+                        },
+                        {
+                            "en": "Frontend integration with the backend to obtain data from the <strong>REST API</strong>.",
+                            "pt": "Integração do frontend com o backend para obter dados da <strong>API REST</strong>."
+                        }
+                    ],
+                    "links": [
+                        {
+                            "content": "Pointsell",
+                            "href": "https://pointsell-kfc7-djaww75wl-rafaels-projects-60e0f9f3.vercel.app"
+                        },
+                        {
+                            "content": "Repository",
+                            "href": "https://github.com/rafae1-afonso/pointsell"
+                        },
+                        {
+                            "content": "Linkedin Post",
+                            "href": "https://www.linkedin.com/posts/nucleo-dev-codes_transformando-a-experi%C3%AAncia-gastron%C3%B4mica-activity-7385358712842113024-wRdn?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE46ScEBKuND4pAJ_AFixyqVDJ0oscQXm_8"
+                        }
+                    ]
+                }
             ]
+        },
+        "resume": {
+            "en": "DOWNLOAD RESUME",
+            "pt": "BAIXAR CURRICULO"
         }
-    ]
+    },
+    "projects": {
+        "header": {
+            "en": "PROJECTS",
+            "pt": "PROJETOS"
+        },
+        "placeholder": {
+            "placeholderName": {
+                "en": "[PROJECT NAME GOES HERE]",
+                "pt": "[NOME DO PROJETO VAI AQUI]"
+            },
+            "year": {
+                "en": "COMING SOON",
+                "pt": "EM BREVE"
+            },
+            "placeholderStack": {
+                "en": "[PROJECT STACK GOES HERE]",
+                "pt": "[STACK DO PROJETO VAI AQUI]"
+            },
+            "placeholderLinks": {
+                "en": "[PROJECT LINKS GOES HERE]",
+                "pt": "[LINKS DO PROJETO VAI AQUI]"
+            },
+            "placeholderImage": {
+                "en": "[PROJECT IMAGE GOES HERE]",
+                "pt": "[IMAGEM DO PROJETO VAI AQUI]"
+            }
+        }
+    },
+    "aboutthisproject": {
+        "en": "This project was inspired by the website of <strong>Awge</strong>, a marketing and audiovisual production company founded by American rapper <strong>A$AP Rocky</strong>. The Awge website is known for its unique and innovative design, which combines bold visual elements with an engaging user experience. The goal of this project is to create a personal portfolio that captures the essence of the Awge website design, using modern technologies such as <strong>Next.js</strong>, <strong>Three.js</strong>, and <strong>TailwindCSS</strong> to build a responsive and visually impressive interface.",
+        "pt": "Este projeto foi feito inspirado no site da <strong>Awge</strong>, uma empresa de marketing e produção audiovisual fundada pelo rapper americano <strong>A$AP Rocky</strong>. O site da Awge é conhecido por seu design único e inovador, que combina elementos visuais ousados com uma experiência de usuário envolvente. O objetivo deste projeto é criar um portfólio pessoal que capture a essência do design do site da Awge, utilizando tecnologias modernas como o <strong>Next.js</strong>, <strong>Three.js</strong>, e <strong>TailwindCSS</strong> para construir uma interface responsiva e visualmente impressionante."
+    }
 }

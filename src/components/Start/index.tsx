@@ -2,12 +2,16 @@ import Link from 'next/link'
 import { FaLinkedinIn, FaGithub } from 'react-icons/fa'
 import TextType from '../TextType'
 import { TbFileCv } from 'react-icons/tb'
+import { useLanguage } from '@/lib/LanguageContext'
+import database from '@/database'
 
 const Start = () => {
+    const { language } = useLanguage()
+
     return <section className="group duration-1000 font-2p flex flex-col items-center gap-10 my-[38vh] cursor-default px-20">
         <TextType
             className='text-sm color-animated-text'
-            text="Full-Stack Developer"
+            text={database.start.role}
             as={'h2'}
             cursorCharacter="_"
             loop={false}
@@ -26,7 +30,7 @@ const Start = () => {
                 <FaLinkedinIn size={45} />
             </Link>
             <Link
-                href='/cv.pdf'
+                href='/Rafael_Afonso_CV.pdf'
                 target='_blank'
                 className="duration-200 text-gray-400 hover:opacity-50 animate-[levitation_1s_infinite_reverse]"
             >
