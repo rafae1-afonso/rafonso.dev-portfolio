@@ -1,4 +1,4 @@
-import { Technologies } from '@/enums';
+import { JSX } from 'react';
 
 import { FaNodeJs, FaReact, FaAngular, FaJava, FaDocker } from "react-icons/fa";
 import { SiJavascript, SiNextdotjs, SiTailwindcss, SiTypescript, SiSpring  } from 'react-icons/si';
@@ -6,7 +6,7 @@ import { SiJavascript, SiNextdotjs, SiTailwindcss, SiTypescript, SiSpring  } fro
 const TechnologyCard = ({ technology }: { technology: string }) => {
 
     const iconSize = 20
-    const styles = {
+    const styles: Record<string, { bgColor: string; content: JSX.Element }> = {
         "JavaScript": {
             bgColor: 'bg-yellow-500',
             content: (
