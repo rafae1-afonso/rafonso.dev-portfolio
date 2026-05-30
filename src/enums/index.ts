@@ -1,6 +1,4 @@
 export enum Technologies {
-    HTML = "HTML",
-    CSS = "CSS",
     JavaScript = "JavaScript",
     TypeScript = "TypeScript",
     TailwindCSS = "TailwindCSS",
@@ -8,9 +6,7 @@ export enum Technologies {
     ReactJS = "ReactJS",
     NextJS = "NextJS",
     Angular = "Angular",
-}
-
-export enum Languages {
-    english = "english",
-    portuguese = "portuguese"
+    SpringBoot = "SpringBoot",
+    Java = "Java",
+    Docker = "Docker",
 }

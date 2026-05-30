@@ -5,9 +5,9 @@ const SectionHeader = ({ imgSrc, title = '(title goes here)' }: { imgSrc?: strin
     return <div className={
             imgSrc ? "w-full flex justify-center lg:justify-between items-center" : "w-full flex justify-center items-center"
         }>
-        {imgSrc && <Image src={imgSrc} alt="about me icon" width={80} height={0} className='hidden lg:block' />}
+        {imgSrc && <Image src={imgSrc} alt="icon" width={80} height={0} className='hidden lg:block' />}
         <Title>{title}</Title>
-        {imgSrc && <Image src={imgSrc} alt="about me icon" width={80} height={0} className='hidden lg:block' />}
+        {imgSrc && <Image src={imgSrc} alt="icon" width={80} height={0} className='hidden lg:block' />}
     </div>
 }
 

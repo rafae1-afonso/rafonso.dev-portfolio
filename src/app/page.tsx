@@ -1,9 +1,9 @@
 'use client'
-import Aboutme from "@/components/Aboutme";
-import Footer from "@/components/Footer";
-import Navbar from "@/components/Navbar";
-import Projects from "@/components/Projects";
-import Start from "@/components/Start";
+import Aboutme from "@/components/organisms/Aboutme";
+import Footer from "@/components/organisms/Footer";
+import Navbar from "@/components/organisms/Navbar";
+import Projects from "@/components/organisms/Projects";
+import Start from "@/components/organisms/Start";
 import TVComponent from "@/components/TVComponent";
 import { useEffect } from "react";
 

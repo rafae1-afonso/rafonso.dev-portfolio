@@ -1,7 +1,7 @@
 {
     "navbar": {
         "home": {
-            "en": "HOME",
+            "en": "START",
             "pt": "INICIO"
         },
         "about": {
@@ -112,8 +112,8 @@
             ]
         },
         "resume": {
-            "en": "DOWNLOAD RESUME",
-            "pt": "BAIXAR CURRICULO"
+            "en": "DOWNLOAD CV",
+            "pt": "BAIXAR CV"
         }
     },
     "projects": {
@@ -121,28 +121,30 @@
             "en": "PROJECTS",
             "pt": "PROJETOS"
         },
-        "placeholder": {
-            "placeholderName": {
-                "en": "[PROJECT NAME GOES HERE]",
-                "pt": "[NOME DO PROJETO VAI AQUI]"
-            },
-            "year": {
-                "en": "COMING SOON",
-                "pt": "EM BREVE"
-            },
-            "placeholderStack": {
-                "en": "[PROJECT STACK GOES HERE]",
-                "pt": "[STACK DO PROJETO VAI AQUI]"
-            },
-            "placeholderLinks": {
-                "en": "[PROJECT LINKS GOES HERE]",
-                "pt": "[LINKS DO PROJETO VAI AQUI]"
-            },
-            "placeholderImage": {
-                "en": "[PROJECT IMAGE GOES HERE]",
-                "pt": "[IMAGEM DO PROJETO VAI AQUI]"
+        "projectsList": [
+            {
+                "name": "Spring Boot REST API",
+                "description": {
+                    "en": "Spring Boot REST API, made for a Java back-end technical challenge. The API provides endpoints for orders and deliveries, allowing the creation of orders, which are sent to a RabbitMQ queue, and are processed by a consumer that creates a delivery entity on top of the received order. This project was a challenge for me, as it was necessary to get familiar with Java development and the Spring Boot framework, as well as learning about message queues and RabbitMQ, but it was a very enriching experience that allowed me to expand my knowledge in back-end development and software architecture.",
+                    "pt": "API REST em Spring Boot, feita para um desáfio técnico de back-end Java. A API fornece endpoints de pedidos e de entregas, permitindo a criação de pedidos, que são enviados para uma fila do RabbitMQ, e são processados por um consumidor que cria uma entidade de entrega em cima do pedido recebido. Esse projeto foi um desáfio para mim, pois foi necessário se ambientar com o desenvolvimento em Java e com o framework Spring Boot, além de aprender sobre filas de mensagens e o RabbitMQ, mas foi uma experiência muito enriquecedora que me permitiu expandir meus conhecimentos em desenvolvimento back-end e arquitetura de software."
+                },
+                "year": "2026",
+                "stack": ["SpringBoot", "Java", "Docker"],
+                "links": [
+                    {
+                        "content": {
+                            "en": "Repository",
+                            "pt": "Repositório"
+                        },
+                        "href": "https://github.com/rafae1-afonso/xbrain-challenge-rest-api"
+                    }
+                ],
+                "images": [
+                    "/projects/spring-boot-restapi/screenshot1.png",
+                    "/projects/spring-boot-restapi/screenshot2.png"
+                ]
             }
-        }
+        ]
     },
     "aboutthisproject": {
         "en": "This project was inspired by the website of <strong>Awge</strong>, a marketing and audiovisual production company founded by American rapper <strong>A$AP Rocky</strong>. The Awge website is known for its unique and innovative design, which combines bold visual elements with an engaging user experience. The goal of this project is to create a personal portfolio that captures the essence of the Awge website design, using modern technologies such as <strong>Next.js</strong>, <strong>Three.js</strong>, and <strong>TailwindCSS</strong> to build a responsive and visually impressive interface.",

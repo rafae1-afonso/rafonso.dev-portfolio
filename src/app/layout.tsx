@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Press_Start_2P, IBM_Plex_Sans } from "next/font/google";
 import "./globals.css";
-import PixelSnow from "@/components/PixelSnow";
+import PixelSnow from "@/components/atoms/PixelSnow";
 import { LanguageProvider } from "@/lib/LanguageContext";
 
 const geistSans = Geist({
