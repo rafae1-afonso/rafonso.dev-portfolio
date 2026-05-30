@@ -29,7 +29,7 @@ export default function TiltedCard({
     altText = 'Tilted card image',
     containerHeight = '300px',
     containerWidth = '500px',
-    scaleOnHover = 1.1,
+    scaleOnHover = 1.2,
     rotateAmplitude = 7,
 }: TiltedCardProps) {
     const ref = useRef<HTMLElement>(null);
@@ -84,7 +84,7 @@ export default function TiltedCard({
     return (
         <figure
             ref={ref}
-            className="duration-1000 relative w-full h-full hover:z-5 hover:shadow-[0_0_50px_white] [perspective:800px] flex flex-col items-center justify-center"
+            className="group group-hover:brightness-50 duration-1000 relative w-full h-full hover:brightness-100 hover:z-5 hover:shadow-[0_0_100px_white] [perspective:800px] flex flex-col items-center justify-center"
             style={{
                 height: containerHeight,
                 width: containerWidth
