@@ -7,6 +7,7 @@ import Link from "next/link";
 
 import { FaExternalLinkAlt } from "react-icons/fa";
 import TiltedImageCard from "../../atoms/TiltedImageCard";
+import { htmlStringToReactNodes } from "@/lib/utils";
 
 const LinkComponent = ({ children, href, download, target, extraStyle }: { children: React.ReactNode, href: string, download?: boolean, target?: string, extraStyle?: string }) => {
     return <Link download={download} href={href} target={target} className={`duration-200 flex px-1 items-center gap-2 font-2p text-sm cursor-pointer hover:shadow-[0_0_5px_white] hover:bg-white hover:text-black ${extraStyle || ''}`}>
@@ -23,9 +24,9 @@ const Projects = () => {
             <div className="h-full flex flex-col justify-center items-center px-10 gap-10">
                 {
                     database.projects.projectsList.map(project => (
-                        <div key={project.name} className="group w-full flex flex-col items-center gap-2 border-b-2 pb-10">
+                        <div key={project.name} className="group w-full flex flex-col items-center gap-2 border-b-2 pb-10 mb-15">
                             <div className="flex lg:flex-row lg:gap-0 gap-5 flex-col-reverse mb-3 w-full justify-between">
-                                <h1 className="duration-200 px-5 font-2p text-start text-sm lg:text-lg
+                                <h1 className="duration-200 px-5 font-2p text-center lg:text-start text-sm lg:text-lg
                          bg-white group-hover:shadow-[0_0_10px_white] text-black">
                                     {project.name}
                                 </h1>
@@ -42,17 +43,17 @@ const Projects = () => {
                                     ))
                                 }
                             </div>
-                            <p className="flex flex-col items-start text-start">
-                                {project.description[language]}
+                            <p className="items-start text-start px-20 lg:px-0">
+                                {htmlStringToReactNodes(project.description[language])}
                             </p>
-                            <div className="w-full flex flex-wrap justify-start gap-5 mt-5">
+                            <div className="w-full flex flex-wrap justify-start gap-5 mt-5 px-20 lg:px-0">
                                 {
                                     project.stack.map(tech => (
                                         <TechnologyCard key={tech} technology={tech} />
                                     ))
                                 }
                             </div>
-                            <div className="w-full flex flex-wrap justify-start gap-5 mt-5">
+                            <div className="w-full flex flex-wrap justify-start gap-5 mt-5 px-20 lg:px-0">
                                 {
                                     project.links.map(link => (
                                         <LinkComponent key={link.href} href={link.href} target="_blank">

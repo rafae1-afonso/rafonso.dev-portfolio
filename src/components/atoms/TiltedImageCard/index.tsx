@@ -29,13 +29,8 @@ export default function TiltedCard({
     altText = 'Tilted card image',
     containerHeight = '300px',
     containerWidth = '500px',
-    imageHeight = '300px',
-    imageWidth = '500px',
     scaleOnHover = 1.1,
     rotateAmplitude = 7,
-    showMobileWarning = true,
-    overlayContent = null,
-    displayOverlayContent = false
 }: TiltedCardProps) {
     const ref = useRef<HTMLElement>(null);
     const x = useMotionValue(0);
@@ -89,7 +84,7 @@ export default function TiltedCard({
     return (
         <figure
             ref={ref}
-            className="duration-1000 relative w-full h-full hover:z-10 hover:shadow-[0_0_50px_white] [perspective:800px] flex flex-col items-center justify-center"
+            className="duration-1000 relative w-full h-full hover:z-5 hover:shadow-[0_0_50px_white] [perspective:800px] flex flex-col items-center justify-center"
             style={{
                 height: containerHeight,
                 width: containerWidth
@@ -98,17 +93,11 @@ export default function TiltedCard({
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
         >
-            {showMobileWarning && (
-                <div className="absolute top-4 text-center text-sm block sm:hidden">
-                    This effect is not optimized for mobile. Check on desktop.
-                </div>
-            )}
 
             <motion.div
-                className="relative [transform-style:preserve-3d] hover:z-2"
+                className="relative [transform-style:preserve-3d] hover:z-2
+                w-[400px] h-[200px] lg:w-[500px] lg:h-[300px]"
                 style={{
-                    width: imageWidth,
-                    height: imageHeight,
                     rotateX,
                     rotateY,
                     scale
@@ -117,11 +106,7 @@ export default function TiltedCard({
                 <motion.img
                     src={imageSrc}
                     alt={altText}
-                    className="absolute top-0 left-0 object-cover rounded-[15px] will-change-transform [transform:translateZ(0)]"
-                    style={{
-                        width: imageWidth,
-                        height: imageHeight
-                    }}
+                    className="absolute w-[400px] h-[200px] lg:w-[500px] lg:h-[300px] top-0 left-0 object-cover rounded-[15px] will-change-transform [transform:translateZ(0)]"
                 />
             </motion.div>
         </figure>

@@ -125,11 +125,11 @@
             {
                 "name": "Spring Boot REST API",
                 "description": {
-                    "en": "Spring Boot REST API, made for a Java back-end technical challenge. The API provides endpoints for orders and deliveries, allowing the creation of orders, which are sent to a RabbitMQ queue, and are processed by a consumer that creates a delivery entity on top of the received order. This project was a challenge for me, as it was necessary to get familiar with Java development and the Spring Boot framework, as well as learning about message queues and RabbitMQ, but it was a very enriching experience that allowed me to expand my knowledge in back-end development and software architecture.",
-                    "pt": "API REST em Spring Boot, feita para um desáfio técnico de back-end Java. A API fornece endpoints de pedidos e de entregas, permitindo a criação de pedidos, que são enviados para uma fila do RabbitMQ, e são processados por um consumidor que cria uma entidade de entrega em cima do pedido recebido. Esse projeto foi um desáfio para mim, pois foi necessário se ambientar com o desenvolvimento em Java e com o framework Spring Boot, além de aprender sobre filas de mensagens e o RabbitMQ, mas foi uma experiência muito enriquecedora que me permitiu expandir meus conhecimentos em desenvolvimento back-end e arquitetura de software."
+                    "en": "<strong>Spring Boot</strong> REST API, made for a Java back-end technical challenge. The API provides endpoints for orders and deliveries, allowing the creation of orders, which are sent to a <strong>RabbitMQ</strong> queue, and are processed by a consumer that creates a delivery entity on top of the received order. This project was a challenge for me, as it was necessary to get familiar with Java development and the Spring Boot framework, as well as learning about message queues and RabbitMQ, but it was a very enriching experience that allowed me to expand my knowledge in back-end development and software architecture.",
+                    "pt": "API REST em <strong>Spring Boot</strong>, feita para um desáfio técnico de back-end Java. A API fornece endpoints de pedidos e de entregas, permitindo a criação de pedidos, que são enviados para uma fila do <strong>RabbitMQ</strong>, e são processados por um consumidor que cria uma entidade de entrega em cima do pedido recebido. Esse projeto foi um desáfio para mim, pois foi necessário se ambientar com o desenvolvimento em Java e com o framework Spring Boot, além de aprender sobre filas de mensagens e o RabbitMQ, mas foi uma experiência muito enriquecedora que me permitiu expandir meus conhecimentos em desenvolvimento back-end e arquitetura de software."
                 },
                 "year": "2026",
-                "stack": ["SpringBoot", "Java", "Docker"],
+                "stack": ["Java", "SpringBoot", "Docker"],
                 "links": [
                     {
                         "content": {
@@ -142,6 +142,36 @@
                 "images": [
                     "/projects/spring-boot-restapi/screenshot1.png",
                     "/projects/spring-boot-restapi/screenshot2.png"
+                ]
+            },
+            {
+                "name": "Narcissist Supply ECommerce",
+                "description": {
+                    "en": "A streetwear fashion e-commerce concept focused on punk aesthetics, with a modern and differentiated design. The project was created with <strong>Angular</strong> and <strong>TailwindCSS</strong> on the front-end, and with <strong>Node.js</strong> and <strong>Express</strong> on the back-end, using a REST API architecture for communication between layers. The database used was sqlite, chosen for its lightness and ease of use, especially since the project is a concept.",
+                    "pt": "Um conceito de e-commerce de moda streetwear focada na estética punk, com um design moderno e diferenciado. O projeto foi criado com <strong>Angular</strong> e <strong>TailwindCSS</strong> no front-end, e com <strong>Node.js</strong> e <strong>Express</strong> no back-end, utilizando uma arquitetura de REST API para comunicação entre as camadas. O banco de dados utilizado foi o sqlite, escolhido pela sua leveza e facilidade de uso, principalmente pelo projeto se tratar de um conceito."
+                },
+                "year": "2025",
+                "stack": ["TypeScript", "NodeJS", "Angular", "TailwindCSS"],
+                "links": [
+                    {
+                        "content": {
+                            "en": "Front-end Repository",
+                            "pt": "Repositório do Front-end"
+                        },
+                        "href": "https://github.com/rafae1-afonso/narcissist-frontend"
+                    },
+                    {
+                        "content": {
+                            "en": "Back-end Repository",
+                            "pt": "Repositório do Back-end"
+                        },
+                        "href": "https://github.com/rafae1-afonso/narcissist-backend"
+                    }
+                ],
+                "images": [
+                    "/projects/narcissist-supply/screenshot1.png",
+                    "/projects/narcissist-supply/screenshot2.png",
+                    "/projects/narcissist-supply/screenshot3.png"
                 ]
             }
         ]
