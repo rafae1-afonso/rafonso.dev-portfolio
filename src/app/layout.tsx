@@ -32,6 +32,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
   return (
     <html lang="en">
       <body
@@ -47,6 +48,7 @@ export default function RootLayout({
             density={0.1}
             direction={180}
             brightness={3}
+            className="hidden lg:block"
           />
           {children}
         </LanguageProvider>
