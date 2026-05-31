@@ -1,6 +1,7 @@
 import type { SpringOptions } from 'motion/react';
 import { useRef, useState } from 'react';
 import { motion, useMotionValue, useSpring } from 'motion/react';
+import Image from 'next/image';
 
 interface TiltedCardProps {
     imageSrc: React.ComponentProps<'img'>['src'];
@@ -47,8 +48,11 @@ export default function TiltedCard({
 
     const [lastY, setLastY] = useState(0);
 
+    const windowWidth = typeof window !== 'undefined' ? window.innerWidth : 0
+
     function handleMouse(e: React.MouseEvent<HTMLElement>) {
         if (!ref.current) return;
+        if (windowWidth < 768) return;
 
         const rect = ref.current.getBoundingClientRect();
         const offsetX = e.clientX - rect.left - rect.width / 2;
@@ -69,11 +73,13 @@ export default function TiltedCard({
     }
 
     function handleMouseEnter() {
+        if (windowWidth < 768) return;
         scale.set(scaleOnHover);
         opacity.set(1);
     }
 
     function handleMouseLeave() {
+        if (windowWidth < 768) return;
         opacity.set(0);
         scale.set(1);
         rotateX.set(0);
@@ -93,10 +99,9 @@ export default function TiltedCard({
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
         >
-
             <motion.div
                 className="relative [transform-style:preserve-3d] hover:z-2
-                w-[400px] h-[200px] lg:w-[500px] lg:h-[300px]"
+                w-[300px] h-[150px] lg:w-[500px] lg:h-[300px]"
                 style={{
                     rotateX,
                     rotateY,
@@ -106,7 +111,7 @@ export default function TiltedCard({
                 <motion.img
                     src={imageSrc}
                     alt={altText}
-                    className="absolute w-[400px] h-[200px] lg:w-[500px] lg:h-[300px] top-0 left-0 object-cover rounded-[15px] will-change-transform [transform:translateZ(0)]"
+                    className="hover:border hover:border-white absolute w-[400px] h-[200px] lg:w-[500px] lg:h-[300px] top-0 left-0 object-cover rounded-[15px] will-change-transform [transform:translateZ(0)]"
                 />
             </motion.div>
         </figure>

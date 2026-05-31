@@ -1,5 +1,5 @@
 import React from 'react'
-import { useLanguage } from '@/lib/LanguageContext'
+import { useLanguage } from '@/context/LanguageContext'
 import database from '@/database'
 
 const Navbutton = ({ href, download, children }: { href: string, download?: boolean, children: React.ReactNode }) => {

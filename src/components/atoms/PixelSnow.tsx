@@ -187,6 +187,9 @@ interface PixelSnowProps {
   style?: React.CSSProperties;
 }
 
+const height = 720;
+const width = 1280;
+
 export default function PixelSnow({
   color = '#ffffff',
   flakeSize = 0.01,
@@ -235,7 +238,7 @@ export default function PixelSnow({
       const w = container.offsetWidth;
       const h = container.offsetHeight;
       renderer.setSize(w, h);
-      material.uniforms.uResolution.value.set(w, h);
+      // material.uniforms.uResolution.value.set(w, h);
     }, 100);
   }, []);
 
@@ -272,7 +275,7 @@ export default function PixelSnow({
     });
 
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-    renderer.setSize(container.offsetWidth, container.offsetHeight);
+    renderer.setSize(width, height);
     renderer.setClearColor(0x000000, 0);
     container.appendChild(renderer.domElement);
     rendererRef.current = renderer;
@@ -282,7 +285,7 @@ export default function PixelSnow({
       fragmentShader,
       uniforms: {
         uTime: { value: 0 },
-        uResolution: { value: new Vector2(container.offsetWidth, container.offsetHeight) },
+        uResolution: { value: new Vector2(width, height) },
         uFlakeSize: { value: flakeSize },
         uMinFlakeSize: { value: minFlakeSize },
         uPixelResolution: { value: pixelResolution },

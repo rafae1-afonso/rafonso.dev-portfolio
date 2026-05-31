@@ -1,5 +1,5 @@
 import database from '@/database'
-import { useLanguage } from '@/lib/LanguageContext'
+import { useLanguage } from '@/context/LanguageContext'
 import { htmlStringToReactNodes } from '@/lib/utils'
 import Link from 'next/link'
 import { TiSocialGithubCircular, TiSocialLinkedinCircular } from 'react-icons/ti'
