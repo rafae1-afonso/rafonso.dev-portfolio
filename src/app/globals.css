@@ -266,8 +266,8 @@ body {
   align-items: center;
   text-align: center;
   width: 100%;
-  overflow-y: scroll;
-  scroll-behavior: smooth;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .tv-tube-shape::before {

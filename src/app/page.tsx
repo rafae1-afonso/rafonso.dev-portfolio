@@ -1,15 +1,16 @@
 'use client'
+import { useEffect } from "react";
 import Aboutme from "@/components/organisms/Aboutme";
 import Footer from "@/components/organisms/Footer";
 import Navbar from "@/components/organisms/Navbar";
 import Projects from "@/components/organisms/Projects";
 import Start from "@/components/organisms/Start";
 import TVComponent from "@/components/TVComponent";
-import { useEffect } from "react";
 
 export default function Home() {
 
   useEffect(() => {
+
     const myObserver = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
