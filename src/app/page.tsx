@@ -6,11 +6,11 @@ import Navbar from "@/components/organisms/Navbar";
 import Projects from "@/components/organisms/Projects";
 import Start from "@/components/organisms/Start";
 import TVComponent from "@/components/TVComponent";
+import CursorComponent from "@/components/atoms/CursorComponent";
 
 export default function Home() {
 
   useEffect(() => {
-
     const myObserver = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -28,6 +28,7 @@ export default function Home() {
   });
 
   return <TVComponent>
+    <CursorComponent />
     <div id='start'></div>
     <Navbar />
     <Start />

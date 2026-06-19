@@ -31,10 +31,23 @@ const TVComponent = ({ children }: { children: React.ReactNode }) => {
         setLenis(lenisInstance);
 
         const onResize = () => lenisInstance.resize();
+        const onKeyDown = (event: KeyboardEvent) => {
+            if (event.key === 'ArrowDown') {
+                event.preventDefault();
+                lenisInstance.scrollTo(lenisInstance.scroll + 120, { duration: 0.5 });
+            }
+            if (event.key === 'ArrowUp') {
+                event.preventDefault();
+                lenisInstance.scrollTo(lenisInstance.scroll - 120, { duration: 0.5 });
+            }
+        };
+
         window.addEventListener('resize', onResize);
+        window.addEventListener('keydown', onKeyDown);
 
         return () => {
             window.removeEventListener('resize', onResize);
+            window.removeEventListener('keydown', onKeyDown);
             lenisInstance.destroy();
             setLenis(null);
         };

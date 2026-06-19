@@ -90,7 +90,7 @@ export default function TiltedCard({
     return (
         <figure
             ref={ref}
-            className="group group-hover:brightness-50 duration-1000 relative w-full h-full hover:brightness-100 hover:z-5 hover:shadow-[0_0_100px_white] [perspective:800px] flex flex-col items-center justify-center"
+            className="group group-hover:brightness-50 duration-1000 relative w-full h-full hover:brightness-100 hover:z-2 hover:shadow-[0_0_100px_white] [perspective:800px] flex flex-col items-center justify-center"
             style={{
                 height: containerHeight,
                 width: containerWidth
@@ -100,8 +100,8 @@ export default function TiltedCard({
             onMouseLeave={handleMouseLeave}
         >
             <motion.div
-                className="relative [transform-style:preserve-3d] hover:z-2
-                w-[300px] h-[150px] lg:w-[500px] lg:h-[300px]"
+                className="relative [transform-style:preserve-3d]
+                w-[300px] h-[150px] lg:w-[500px] lg:h-[300px] hover:z-2"
                 style={{
                     rotateX,
                     rotateY,
