@@ -372,7 +372,7 @@ export default function PixelSnow({
   return (
     <div
       ref={containerRef}
-      className={`absolute inset-0 w-full h-full transform-gpu will-change-transform backface-hidden ${className}`}
+      className={`absolute inset-0 w-screen h-screen transform-gpu will-change-transform backface-hidden ${className}`}
       style={style}
     />
   );

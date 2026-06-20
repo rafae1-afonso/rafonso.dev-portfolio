@@ -14,7 +14,8 @@ export default function CursorComponent() {
             const cursor = document.getElementById('cursor-pointer');
             if (cursor) {
                 cursor.style.transition = 'transform 0.2s ease';
-                cursor.style.transform = 'rotate(45deg)';
+                cursor.style.transform = 'rotate(135deg)';
+                cursor.style.boxShadow = '0 0 15px white';
             }
         });
 
@@ -23,6 +24,7 @@ export default function CursorComponent() {
             if (cursor) {
                 cursor.style.transition = 'transform 0.2s ease';
                 cursor.style.transform = 'rotate(0deg)';
+                cursor.style.boxShadow = '0 0 10px white';
             }
         });
     }
